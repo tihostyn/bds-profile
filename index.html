@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("img/background.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 5px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .profile-info {
+            display: flex;
+            text-align: left;
+            flex-direction: column;
+        }
+
+        .friend {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .friend-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script type="text/turtle">
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    @prefix schema: <http://schema.org/> .
+    @prefix dcterms: <http://purl.org/dc/terms/> .
+
+    <#me> a foaf:Person .
+    <#me> foaf:name "Tijs Hostyn"@en .
+    <#me> foaf:based_near "Ghent"@en, "Gent"@nl .
+    <#me> foaf:img <https://github.ugent.be/pages/tihostyn/bds-profile/img/tijs_hostyn.jpg> .
+    <#me> foaf:knows <https://pietercolpaert.be/#me>,
+                <https://sven-lieber.org/#me>,
+                <https://micdwild.github.io/#me>,
+                <https://tocornel.github.io/bds-me/#me>,
+                <https://lowie314.github.io/bds/#me>,
+                <https://gubogaer.solidcommunity.net/profile/card#me>,
+                <https://robinbru.solidcommunity.net/profile/card#me> .
+    <#me> schema:email "tijs.hostyn@ugent.be" .
+    <#me> dcterms:description "Student in Computer Science following the course Big Data Science" .
+    </script>
+    <div class="container">
+        <h1>My Profile</h1>
+
+        <div class="profile">
+            <img src="img/tijs_hostyn.jpg" alt="Profile Image" class="profile-image">
+            <div class="profile-info">
+                <h2>Tijs Hostyn</h2>
+                <p>Based Near: Ghent</p>
+                <p>Description: Student in Computer Science following the course Big Data Science </p>
+                <p>Email: tijs.hostyn@ugent.be</p>
+            </div>
+        </div>
+
+        <h2>Friends</h2>
+
+        <div class="friend">
+            <img src="img/pieter_colpaert.jpg" alt="Friend 1" class="friend-image">
+            <p>Pieter Colpaert</p>
+        </div>
+
+        <div class="friend">
+            <img src="img/sven_lieber.jpeg" alt="Friend 2" class="friend-image">
+            <p>Sven Lieber</p>
+        </div>
+
+        <div class="friend">
+            <img src="img/lowie_meganck.jpg" alt="Friend 3" class="friend-image">
+            <p>Lowie Meganck</p>
+        </div>
+        <div class="friend">
+            <img src="img/to_cornelis.png" alt="Friend 4" class="friend-image">
+            <p>To Cornelis</p>
+        </div>
+        <div class="friend">
+            <img src="img/michiel_de_wilde.jpg" alt="Friend 5" class="friend-image">
+            <p>Michiel De Wilde</p>
+        </div>
+
+        <div class="friend">
+            <img src="img/gust_bogaert.jpg" alt="Friend 6" class="friend-image">
+            <p>Gust Bogaert</p>
+        </div>
+        <div class="friend">
+            <img src="img/robin_bruteyn.jpg" alt="Friend 7" class="friend-image">
+            <p>Robin Bruteyn</p>
+        </div>
+    </div>
+</body>
+
+</html>
